@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{5573AA75-A1A7-4086-9331-EF6AC27756BB}</ProjectGuid>
-    <RootNamespace>ooplw3</RootNamespace>
+    <ProjectGuid>{854671EE-5C00-4E06-8FE7-197DB933B1D7}</ProjectGuid>
+    <RootNamespace>My53104</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,7 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="sandbox.cpp" />
+    <ClCompile Include="Gym.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
