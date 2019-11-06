@@ -106,7 +106,8 @@ void Hanoi::moveTower(int from, int to)
 }
 
 void Hanoi::printTowers()
-{	for (int i = 0; i < numOfTowers; i++)
+{
+	for (int i = 0; i < numOfTowers; i++)
 	{
 		std::cout << "tower_" << i + 1 << ":";
 		Hanoi::tower[i].printContent();
@@ -119,7 +120,7 @@ int main(void)
 	Hanoi hanoi;
 
 	std::string move = "";
-	while (true)
+	while (true) //TODO: make validation if problem is solved
 	{
 		hanoi.printTowers();
 		try
