@@ -95,7 +95,6 @@ void handleCommand(std::vector<Member>& member, std::string& command)
 	std::vector<std::string> arg = split(command, ' ', 3);
 	std::string action = arg[0];
 
-	//TODO refactoring
 	if (action == "create")
 	{
 		if (arg.size() < 3) throw std::exception("Not enough arguments.");
