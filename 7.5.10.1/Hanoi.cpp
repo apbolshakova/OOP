@@ -3,6 +3,7 @@
 #include <exception> 
 #include <stdexcept>
 #include <vector>
+#include <ctype.h>
 
 class TowersDomainError : public std::domain_error {
 public:
@@ -111,8 +112,10 @@ void Hanoi::printTowers()
 	{
 		std::cout << "tower_" << i + 1 << ":";
 		Hanoi::tower[i].printContent();
+		
 		std::cout << std::endl;
 	}
+	std::cout << "Print any negative number to quit." << std::endl;
 }
 
 int main(void)
@@ -120,14 +123,15 @@ int main(void)
 	Hanoi hanoi;
 
 	std::string move = "";
-	while (true) //TODO: make validation if problem is solved
+	while (move[0] != '-')
 	{
 		hanoi.printTowers();
 		try
 		{
 			std::getline(std::cin, move);
-			if (move.size() < 2) throw std::invalid_argument("Invalid input.");
-			hanoi.moveTower(move[0] - '0' - 1, move[1] - '0' - 1);
+			if (move.size() < 2 || !isdigit(move[1]) || (!isdigit(move[0]) && move[0] != '-')) 
+				throw std::invalid_argument("Invalid input.");
+			if (isdigit(move[0])) hanoi.moveTower(move[0] - '0' - 1, move[1] - '0' - 1);
 		}
 		catch (std::exception &ex)
 		{

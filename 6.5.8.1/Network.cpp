@@ -6,7 +6,7 @@ class IPAddress
 {
 	std::string IP;
 public:
-	IPAddress(std::string IP = nullptr) : IP(IP) {}; //TODO: input validation
+	IPAddress(std::string IP = nullptr) : IP(IP) {};
 	std::string getIP() { return IPAddress::IP; }
 };
 

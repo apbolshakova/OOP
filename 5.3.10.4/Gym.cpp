@@ -148,7 +148,7 @@ int main()
 	std::string command = "";
 	do
 	{
-		printMembers(member); //TODO: create management class and do some refactoring
+		printMembers(member);
 		std::getline(std::cin, command);
 		try 
 		{ 
