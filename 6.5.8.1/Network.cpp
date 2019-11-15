@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <conio.h>
+#include <vector>
+#include <iostream>s
 
 class IPAddress
 {
@@ -51,11 +53,20 @@ void Network::printAdresses()
 
 int main()
 {
-	IPAddress el1("1.1.1.1");
-	IPAddress el2("2.2.2.2");
-	IPAddress el3("3.3.3.3");
-	IPAddress el4("4.4.4.4");
-	IPAddress el5("5.5.5.5");
+	std::vector<std::string> ip;
+
+	for (int i = 0; i < 5; i++)
+	{
+		std::string str;
+		std::getline(std::cin, str);
+		ip.push_back(str);
+	}
+
+	IPAddress el1(ip[0]);
+	IPAddress el2(ip[1]);
+	IPAddress el3(ip[2]);
+	IPAddress el4(ip[3]);
+	IPAddress el5(ip[4]);
 
 	Network net1(1);
 	net1.addIPAdress(&el1);
